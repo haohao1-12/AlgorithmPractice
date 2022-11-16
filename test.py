@@ -18,9 +18,7 @@ def deduplicate(point):
     
 
 data = [(0.1,0),(4.5,0),(4.5,1.4),(4.5,2.8),(2,4),(1,3.5),(0,3)]
-#a = data.copy()
-#data.remove(data[0])
-#print(data)
+
 a = deduplicate(data)
 print(a)
 
