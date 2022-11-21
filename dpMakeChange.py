@@ -20,3 +20,41 @@ def dpMakeChange(coinValueList, change, minCoins):
     return minCoins[change]
 
 print(dpMakeChange([1, 5, 10, 21, 25], 63, [0] * 64))
+
+'''
+前面的算法已经得到了最少硬币的数量，但没有返回硬币如何组合
+扩展思路是在生成最优解列表的同时跟踪记录所选择的那枚硬币币值
+在得到最后的解之后，减去选择的硬币币值，回溯到表格之前的部分找零
+就能逐步得到每一步所选择的硬币的币值
+'''
+
+def dpMakeChange(coinValueList, change, minCoins, coinsUsed):
+    for cents in range(change + 1): 
+        coinCount = cents
+        newCoin = 1 # initialize next new coin
+        for j in [c for c in coinValueList if c <= cents]:
+            if minCoins[cents - j] + 1 < coinCount:
+                coinCount = minCoins[cents - j] + 1
+                newCoin = j
+        minCoins[cents] = coinCount
+        coinsUsed[cents] = newCoin
+    return minCoins[change]
+
+def printCoins(coinUsed, change):
+    coin = change
+    while coin > 0:
+        thisCoin = coinUsed[coin]
+        print(thisCoin)
+        coin = coin - thisCoin
+
+amnt = 63
+clist = [1,5,10,21,25]
+coinsUsed = [0]*(amnt+1)
+coinCount = [0]*(amnt+1)
+
+print("Making change for", amnt, "requires")
+print(dpMakeChange(clist, amnt, coinCount, coinsUsed), "coins")
+print("They are:")
+printCoins(coinsUsed, amnt)
+print("The used list is as follows:")
+print(coinsUsed)
