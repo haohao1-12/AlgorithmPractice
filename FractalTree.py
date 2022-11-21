@@ -15,7 +15,7 @@ def tree(branch_len):
 
 t = turtle.Turtle()
 t.left(90)
-t.penup()
+t. penup()
 t.backward(100)
 t.pendown()
 t.pencolor('green')
