@@ -27,3 +27,4 @@ def thief(tr, w):
         return vmax
 
 print(thief(tr, max_w))
+print(m)
