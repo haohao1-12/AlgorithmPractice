@@ -1,4 +1,4 @@
-# 链表实现法
+# 链表实现
 class BinaryTree:
     def __init__(self,rootObj):
         self.key = rootObj
