@@ -1,6 +1,6 @@
 # 建立表达式解析树 代码
-import BinaryTree_class
-
+from BinaryTree_class import BinaryTree
+from stack import Stack
 def buildParseTree(fpexp):
     fplist = fpexp.split()
     # 创建单词列表
@@ -35,7 +35,7 @@ def buildParseTree(fpexp):
         
     return eTree
 
-
+buildParseTree('(3+(4*5))')
 
         
 
