@@ -6,7 +6,7 @@ class BinaryTree:
         self.rightChild = None
 
 
-    def insetLeft(self, newNode):
+    def insertLeft(self, newNode):
         if self.leftChild == None:
             self.leftChild = BinaryTree(newNode)
         else:

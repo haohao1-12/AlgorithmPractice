@@ -16,7 +16,7 @@ def buildParseTree(fpexp):
             currentTree = currentTree.getLeftChild()
             # 当前节点下降到左子节点
 
-        elif i not in ['+', '-', '*', '/']:
+        elif i not in ['+', '-', '*', '/', ')']:
             currentTree.setRootVal(int(i))
             parent = pStack.pop()
             currentTree = parent
@@ -35,7 +35,7 @@ def buildParseTree(fpexp):
         
     return eTree
 
-buildParseTree('(3+(4*5))')
+buildParseTree('( 3 + ( 4 * 5 ) )')
 
         
 

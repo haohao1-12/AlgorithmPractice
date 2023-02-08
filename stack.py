@@ -16,13 +16,3 @@ class Stack:
 
     def size(self):
         return len(self.items) 
-
-s = Stack()
-print(s.isEmpty())
-
-s.push(4)
-s.push('dog')
-
-print(s.size())
-print(s)
-print(s.pop())
