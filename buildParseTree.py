@@ -35,7 +35,7 @@ def buildParseTree(fpexp):
         
     return eTree
 
-buildParseTree('( 3 + ( 4 * 5 ) )')
+
 
         
 
