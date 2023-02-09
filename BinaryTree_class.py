@@ -33,3 +33,12 @@ class BinaryTree:
 
     def getRootVal(self):
         return self.key
+
+    # 在BinaryTree类中实现前序遍历 （需要加入子树是否为空的判断）根 左 右
+    def preorder(self):
+        print(self.key)
+        if self.leftChild:
+            self.leftChild.preorder()
+        if self.rightChild:
+            self.rightChild.preorder()
+
