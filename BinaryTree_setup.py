@@ -1,3 +1,4 @@
+# 嵌套列表法
 def BinaryTree(r):
     return [r, [], []]
 
