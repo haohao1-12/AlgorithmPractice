@@ -3,9 +3,9 @@ def BinaryTree(r):
     return [r, [], []]
 
 def insertLeft(root, newBranch):
-    t = root.pop(1)
-    if len(t) > 1:
-        root.insert(1, [newBranch, t, []])
+    t = root.pop(1) # pop out left subtree
+    if len(t) > 1: # left subtree available
+        root.insert(1, [newBranch, t, []]) 
     else:
         root.insert(1, [newBranch, [], []])
     return root
