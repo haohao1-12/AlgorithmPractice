@@ -1,4 +1,4 @@
-# 建立表达式解析树 代码
+# 建立表达式解析树 
 from BinaryTree_class import BinaryTree
 from stack import Stack
 def buildParseTree(fpexp):
