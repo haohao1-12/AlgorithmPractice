@@ -1,11 +1,11 @@
 # 建立表达式解析树 
-from pythonds import trees
+from BinaryTree_class import BinaryTree
 from Tree.stack import Stack
 def buildParseTree(fpexp):
     fplist = fpexp.split()
     # 创建单词列表
     pStack = Stack()
-    eTree = trees.BinaryTree('') # 创建一个空的树
+    eTree = BinaryTree('') # 创建一个空的树
     pStack.push(eTree) # 当前节点入栈
     currentTree = eTree
 
