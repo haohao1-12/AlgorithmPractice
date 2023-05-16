@@ -1,6 +1,6 @@
 # 建立表达式解析树 
 from BinaryTree_class import BinaryTree
-from Tree.stack import Stack
+from stack import Stack
 def buildParseTree(fpexp):
     fplist = fpexp.split()
     # 创建单词列表
