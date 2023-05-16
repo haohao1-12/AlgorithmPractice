@@ -2,7 +2,6 @@
 # Introduction to Data Structures and Algorithms in Python
 # Copyright 2005
 # 
-
 class BinaryTree:
     """
     A recursive implementation of Binary Tree
@@ -66,6 +65,7 @@ class BinaryTree:
         if self.rightChild:
             self.rightChild.preorder()
 
+    '''
     def printexp(self):
         if self.leftChild:
             print('(', end=' ')
@@ -143,3 +143,4 @@ x.insertRight(7)
 print(printexp(x))
 print(postordereval(x))
 print(height(x))
+'''

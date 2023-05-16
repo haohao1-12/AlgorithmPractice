@@ -32,3 +32,15 @@ def postordereval(tree):
         else:
             return tree.getRootVal()
 print(postordereval(tree))
+
+# 生成全括号中缀表达式 (左根右)
+# 用表达式解析树恢复表达式字符串形式
+def printexp(tree):
+    sVal = ""
+    if tree:
+        sVal = '(' + printexp(tree.getLeftChild())
+        sVal = sVal + str(tree.getRootVal())
+        sVal = sVal + printexp(tree.getRightChild())+ ')'
+    return sVal
+    
+print(printexp(tree))
