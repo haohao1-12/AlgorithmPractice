@@ -41,6 +41,6 @@ def printexp(tree):
         sVal = '(' + printexp(tree.getLeftChild())
         sVal = sVal + str(tree.getRootVal())
         sVal = sVal + printexp(tree.getRightChild())+ ')'
-    return sVal
+    return str(sVal)
     
 print(printexp(tree))
